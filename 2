@@ -285,14 +285,7 @@ function CreateLoader(Title, WindowSize)
     table.insert(Drawings, SliderFrame)
     
 
-local MiddleIcon = Drawing.new("Image");
-MiddleIcon.Size = Vector2.new(185, 185);
-MiddleIcon.Rounding = 5;
-MiddleIcon.Transparency = 1;
-MiddleIcon.Visible = true;
-LogoData = Library:EnsureLogo();   -- the loader shows before check() runs, so it fetches the logo itself
-if LogoData then MiddleIcon.Data = LogoData end;
-table.insert(Drawings, MiddleIcon);
+
 
 SliderInline.Position = Vector2.new(
 	WindowOutline.Position.X + (WindowOutline.Size.X / 2) - (SliderOutline.Size.X / 2), 
@@ -301,11 +294,7 @@ SliderInline.Position = Vector2.new(
 SliderOutline.Position = Vector2.new(SliderInline.Position.X + 1, SliderInline.Position.Y + 1);
 SliderFrame.Position = Vector2.new(SliderInline.Position.X + 1, SliderInline.Position.Y + 1);
 WindowText.Position = Vector2.new(WindowFrame.Position.X + (WindowFrame.Size.X / 2), SliderInline.Position.Y - 16);
-MiddleIcon.Position = Vector2.new(
-	WindowOutline.Position.X + (WindowOutline.Size.X / 2) - (MiddleIcon.Size.X / 2), 
-	WindowOutline.Position.Y + (WindowOutline.Size.Y / 2) - (MiddleIcon.Size.Y / 2) - 15
-);
-MiddleIcon.Transparency = 1;
+
 
 
 
